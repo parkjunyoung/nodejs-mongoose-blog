@@ -1,5 +1,5 @@
 {
-  "name": "board1",
+  "name": "nodejs-mongoose-blog",
   "version": "0.0.0",
   "private": true,
   "scripts": {
