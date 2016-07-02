@@ -1,0 +1,17 @@
+<% include ../head.ejs %>
+	<table class="table table-bordered">
+		<tr>
+			<th>제목</th>
+			<th>작성일</th>
+		</tr>
+		<% postList.forEach(function(post){ %>
+		<tr>
+			<td><a href="/post/detail/<%=post.id%>"><%=post.title%></a></td>
+			<td><%=post.content%></td>
+		</tr>
+		<%});%>
+	</table>
+	<a href="/post/write" class="btn btn-default">작성하기</a>
+	
+
+<% include ../tail.ejs %>

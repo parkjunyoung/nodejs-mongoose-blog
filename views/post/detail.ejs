@@ -1,0 +1,18 @@
+<% include ../head.ejs %>
+
+<div>
+	<h3><%=post.title%></h3>
+	<div class="row">
+		<%=post.content%>
+
+	</div>
+
+	<div class='row' style="margin-top:20px;">
+		<a href="/post" class="btn btn-primary">목록으로</a>
+		<a href="/post/edit/<%=post.id%>" class="btn btn-default">수정</a>
+		<a href="/post/delete/<%=post.id%>" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+
+	</div>
+
+</div>
+<% include ../tail.ejs %>

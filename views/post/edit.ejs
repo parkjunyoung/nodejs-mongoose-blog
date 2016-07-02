@@ -1,0 +1,27 @@
+<% include ../head.ejs %>
+	<form method='post' action="" enctype="multipart/form-data">
+		<table class="table table-bordered">
+			<tr>
+				<th>제목</th>
+				<td>
+					<input type="text" name="title" class="form-control" value="<%=post.title%>" />
+				</td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td>
+					<input type="text" name="content" class="form-control" value="<%=post.content%>" />
+				</td>
+			</tr>
+			<tr>
+				<th>파일</th>
+				<td>
+					<input type='file' name='upload_file'	/>
+				</td>
+			</tr>
+		</table>
+		<button class="btn btn-primary">작성</button>
+
+
+	</form>
+<% include ../tail.ejs %>
