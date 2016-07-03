@@ -7,6 +7,7 @@
     npm install
     mkdir uploads
     chmod 707 uploads/
+    npm start
 
 
 ### node_module
