@@ -5,6 +5,7 @@ var autoIncrement = require('mongoose-auto-increment');
 var PostSchema = new Schema({
 	title : String,
 	content : String,
+	upload_file : String,
 	created_at : { type : Date , default : Date.now }
 });
 

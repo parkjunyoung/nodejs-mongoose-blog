@@ -4,14 +4,18 @@
 			<th>제목</th>
 			<th>작성일</th>
 		</tr>
-		<% postList.forEach(function(post){ %>
+		<% postList.forEach(function(post){ 
+			var date = new Date(post.created_at); 
+			var year = date.getFullYear();
+			var m = date.getMonth()+1;
+			var d = date.getDate();
+		%>
 		<tr>
 			<td><a href="/post/detail/<%=post.id%>"><%=post.title%></a></td>
-			<td><%=post.content%></td>
+			<td><%= year %>-<%= m %>-<%= d %></td>
 		</tr>
 		<%});%>
 	</table>
 	<a href="/post/write" class="btn btn-default">작성하기</a>
-	
 
 <% include ../tail.ejs %>
